@@ -90,6 +90,7 @@ public class interfaz extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         Resultados2 = new javax.swing.JTextArea();
         Tutorial = new javax.swing.JButton();
+        botonAbout = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -307,6 +308,13 @@ public class interfaz extends javax.swing.JFrame {
             }
         });
 
+        botonAbout.setText("About");
+        botonAbout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonAboutActionPerformed(evt);
+            }
+        });
+
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -410,13 +418,20 @@ public class interfaz extends javax.swing.JFrame {
             .add(layout.createSequentialGroup()
                 .add(129, 129, 129)
                 .add(jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 504, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jScrollPane2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 506, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(layout.createSequentialGroup()
-                        .add(185, 185, 185)
-                        .add(Tutorial, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 128, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .add(0, 43, Short.MAX_VALUE))
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jScrollPane2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 506, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(0, 43, Short.MAX_VALUE))
+                    .add(layout.createSequentialGroup()
+                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(layout.createSequentialGroup()
+                                .add(183, 183, 183)
+                                .add(Tutorial, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 128, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                            .add(layout.createSequentialGroup()
+                                .add(209, 209, 209)
+                                .add(botonAbout)))
+                        .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -521,7 +536,9 @@ public class interfaz extends javax.swing.JFrame {
                         .add(15, 15, 15)
                         .add(jScrollPane2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 150, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .add(18, 18, 18)
-                        .add(Tutorial, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                        .add(Tutorial, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 50, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(18, 18, 18)
+                        .add(botonAbout)))
                 .add(12, 12, 12))
         );
 
@@ -746,6 +763,25 @@ public class interfaz extends javax.swing.JFrame {
         Resultados2.setText(Tutorial);
     }//GEN-LAST:event_TutorialActionPerformed
 
+    private void botonAboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAboutActionPerformed
+        // TODO add your handling code here:
+        String msj = "By \nMarcos P. Pollastri\n&\nStefano Tagliaferri"
+        + " \n\nThis program is free software: you can redistribute it and/or modify\n" +
+"    it under the terms of the GNU General Public License as published by\n" +
+"    the Free Software Foundation, either version 3 of the License, or\n" +
+"    (at your option) any later version.\n" +
+"\n" +
+"    This program is distributed in the hope that it will be useful,\n" +
+"    but WITHOUT ANY WARRANTY; without even the implied warranty of\n" +
+"    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n" +
+"    GNU General Public License for more details.\n" +
+"\n" +
+"    You should have received a copy of the GNU General Public License\n" +
+"    along with this program.  If not, see <http://www.gnu.org/licenses/>.\n"
+                + "\nYou can download the sourcecode from:\nhttps://github.com/marcosppollastri/SimuladorDePeleas";
+        JOptionPane.showMessageDialog(rootPane, msj);
+    }//GEN-LAST:event_botonAboutActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -808,6 +844,7 @@ public class interfaz extends javax.swing.JFrame {
     private javax.swing.JTextField SNombre3;
     private javax.swing.JButton Tutorial;
     private javax.swing.JButton VaciarLista;
+    private javax.swing.JButton botonAbout;
     private javax.swing.JButton exportarListabtn;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
